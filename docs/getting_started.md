@@ -19,6 +19,20 @@ For installation instructions, please see [install.md](install.md).
 
 <!-- TOC -->
 
+
+
+##我的问题：
+- [ ] [Prepare Datasets] 怎么准备自己的数据集的文件呢？？？
+- [ ] [Prepare Datasets] 怎么把多个json文件合并起来呢？？
+- [ ] [Prepare Datasets] 怎么随机分train和val和test？
+- [x] [Prepare Datasets] 在哪里下载预训练网络的checkpoints： 找到config文件所在同一目录下的yml文件，里面有cp文件的url网址。下载到{$root_dir}/checkpoints/
+- [x] [Run demos]        已成功运行2D image top-down.demo / bottom-up.demo
+- [ ] [Train a model]    什么是distributed training and non-distributed training？？？
+- [x] [Train a model]    “which is specified by `work_dir` in the config file.”  如果是自己的数据集，应该用哪一个config file？
+                           - 猜测： /configs/body/2d_kpt_sview_rgb_img/topdown_heatmap/hourglass52_mpii_256x256.py
+                           - 把这个config文件拷贝到/configs目录下，重命名为my_config.py, 编辑这个config文件, 修改过的地方在文件中注释.
+                           - 在hourglass.yml中找到了checkpoint的url地址，下载到 mmpose/checkpoints/目录
+
 ## Prepare Datasets
 
 MMPose supports multiple tasks. Please follow the corresponding guidelines for data preparation.
